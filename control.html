@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @keyframes borderAnimation {
+            0% { border-color: red; }
+            50% { border-color: yellow; }
+            100% { border-color: black; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 5px red; }
+            50% { box-shadow: 0 0 20px yellow; }
+            100% { box-shadow: 0 0 5px black; }
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .section {
+            background: #1c1c1c;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border: 5px solid red;
+            animation: borderAnimation 3s infinite alternate, fadeIn 2s;
+        }
+        .section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            animation: pulse 2s infinite alternate;
+        }
+        .highlight {
+            color: #ff3b3b;
+            font-weight: bold;
+        }
+        .risk-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .risk-item {
+            background: linear-gradient(45deg, red, black);
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            animation: pulse 2s infinite alternate;
+        }
+        .risk-item:first-child { width: 60%; }
+        .risk-item:nth-child(2) { width: 80%; }
+        .risk-item:last-child { width: 40%; }
+        .metrics {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .metric {
+            background: #222;
+            padding: 10px;
+            border-radius: 5px;
+            flex: 1;
+            margin: 5px;
+        }
+        .chart-container {
+            width: 50%;
+            max-width: 400px;
+        }
+        .content {
+            flex: 1;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .btn {
+            background: red;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 5px;
+            display: inline-block;
+        }
+        .btn:hover {
+            background: yellow;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <div class="content">
+                <h2>Controlling and Monitoring</h2>
+                <p>Project controlling ensures that planned objectives are achieved by continuously tracking activities, comparing actual performance against the plan, and taking corrective actions when needed.</p>
+                <p>It involves financial oversight, timeline adherence, risk mitigation, and stakeholder reporting to keep the project on course.</p>
+            
+                <p><strong>Key Aspects of Controlling & Monitoring:</strong></p>
+                <ul>
+                    <li>📊 <strong>Performance Tracking:</strong> Monitor KPIs and milestones regularly.</li>
+                    <li>💸 <strong>Budget Control:</strong> Ensure spending aligns with allocations and flag overruns.</li>
+                    <li>⏱️ <strong>Timeline Monitoring:</strong> Keep activities on schedule with deadline checks.</li>
+                    <li>⚠️ <strong>Risk Identification:</strong> Detect and address potential issues early.</li>
+                    <li>📈 <strong>Progress Reporting:</strong> Share updates with stakeholders for transparency.</li>
+                    <li>🔁 <strong>Feedback Loop:</strong> Implement improvements based on regular evaluations.</li>
+                </ul>
+            </div>
+            
+            <div class="chart-container">
+                <canvas id="controlChart"></canvas>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="content">
+                <h2>Risk Management and Mitigation</h2>
+                <p>Proactive risk management protects the project from delays and losses by anticipating problems before they occur.</p>
+            
+                <p><strong>Key Points:</strong></p>
+                <ul>
+                    <li>🔍 Identify risks early through analysis</li>
+                    <li>📉 Assess severity and likelihood</li>
+                    <li>🛡️ Develop mitigation strategies</li>
+                    <li>🔄 Monitor and update risk plans</li>
+                    <li>🤝 Involve stakeholders in response actions</li>
+                </ul>
+            </div>
+            
+                <div class="risk-box">
+                    <div class="risk-item">🔍 Identify Risks - Recognize potential project risks.</div>
+                    <div class="risk-item">⚠️ Assess Impact - Evaluate the severity of risks.</div>
+                    <div class="risk-item">🛡️ Mitigation Plans - Develop strategies to minimize threats.</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="content">
+                <h2>Project Closure and Reporting</h2>
+                <p>Effective closure ensures accountability and knowledge transfer. It includes final reports, reviews, and documenting key insights for future projects.</p>
+            
+                <p><strong>Key Points:</strong></p>
+                <ul>
+                    <li>📁 Finalize deliverables and documentation</li>
+                    <li>📊 Review outcomes and budget performance</li>
+                    <li>🧠 Capture lessons learned</li>
+                    <li>📤 Submit closure report to stakeholders</li>
+                </ul>
+            
+                <div class="metrics">
+                    <div class="metric fly-in">📈<br><strong>95%</strong><br><small>Recovery Rate</small></div>
+                    <div class="metric fly-in">💰<br><strong>₹4,263,980</strong><br><small>Cost Savings</small></div>
+                    <div class="metric fly-in">🧠<br><strong>10</strong><br><small>Lessons Learned</small></div>
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <canvas id="closureChart"></canvas>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <a href="budget.html" class="btn">Back</a>
+            <a href="./thank.html" class="btn">Next</a>
+        </div>
+    </div>
+
+    <script>
+        const controlCtx = document.getElementById('controlChart').getContext('2d');
+        new Chart(controlCtx, {
+            type: 'line',
+            data: {
+                labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+                datasets: [{
+                    label: 'Performance',
+                    data: [75, 80, 85, 90],
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'red',
+                    borderWidth: 2
+                }]
+            }
+        });
+
+        const closureCtx = document.getElementById('closureChart').getContext('2d');
+        new Chart(closureCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Recovered', 'Lost'],
+                datasets: [{
+                    data: [95, 5],
+                    backgroundColor: ['#4caf50', '#ff3b3b']
+                }]
+            }
+        });
+    </script>
+</body>
+</html>

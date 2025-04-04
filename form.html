@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Waste Recycling</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: black;
+            color: white;
+            margin: 0;
+            padding: 30px;
+            text-align: center;
+            overflow-x: hidden;
+            border: 20px solid;
+            border-image: linear-gradient(45deg, red, yellow, black) 1;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1.5fr 1.3fr; /* Increased text area more */
+            gap: 50px;
+            max-width: 1800px;
+            margin: auto;
+            align-items: center;
+            animation: fadeIn 1.5s ease-in-out;
+            padding: 50px;
+        }
+        .section {
+            background: #222;
+            padding: 80px; /* Increased padding */
+            border-radius: 20px;
+            animation: slideIn 1s ease-in-out;
+            font-size: 2.5rem; /* Even bigger text */
+        }
+        h1 {
+            font-size: 5rem; /* Bigger heading */
+            color: #ffcc00;
+            text-transform: uppercase;
+            position: relative;
+            animation: bounceTitle 2s infinite;
+        }
+        p {
+            font-size: 2.8rem; /* Increased paragraph text */
+            line-height: 2;
+            animation: fadeInText 2s ease-in-out;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #ff4444;
+        }
+        .image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: zoomIn 1.5s ease-in-out;
+        }
+        .image img {
+            width: 100%;
+            max-width: 1200px; /* Increased image size */
+            border-radius: 15px;
+            transform: scale(1);
+            transition: transform 0.5s;
+            animation: pulseImage 2s infinite alternate;
+        }
+        .image img:hover {
+            transform: scale(1.05);
+        }
+        .line {
+            width: 95%;
+            height: 7px;
+            background: #ffcc00;
+            margin: 60px auto;
+        }
+        .process-container {
+            max-width: 1800px;
+            margin: auto;
+            padding: 50px;
+            display: grid;
+            grid-template-columns: 1.5fr 1.3fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .process {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        .process-item {
+            background: #333;
+            padding: 40px; /* Bigger div */
+            border-radius: 15px;
+            font-size: 2.6rem;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            animation: fadeInText 1.5s ease-in-out;
+        }
+        .process-item img {
+            width: 120px; /* Increased process image size */
+            height: 120px;
+            border-radius: 12px;
+            animation: slideInProcess 2s ease-in-out;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px;
+            position: fixed;
+            bottom: 20px;
+            width: 95%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .btn {
+            padding: 25px 50px;
+            background: #ffcc00;
+            color: black;
+            border: none;
+            font-size: 2.5rem; /* Increased button text size */
+            cursor: pointer;
+            border-radius: 12px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .btn:hover {
+            background: #e6b800;
+            transform: scale(1.2);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInText {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        @keyframes bounceTitle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes pulseImage {
+            from { transform: scale(0.95); }
+            to { transform: scale(1); }
+        }
+        @keyframes slideIn {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="section">
+            <h1>The Growing Problem of <span class="highlight">E-Waste</span></h1>
+            <p>E-waste is the fastest-growing waste stream worldwide. Improper disposal poses significant environmental risks.</p>
+            <p><span class="highlight">Environmental Hazards:</span> E-waste contains hazardous materials like lead and mercury.</p>
+            <p><span class="highlight">Health Risks:</span> Exposure to these toxins can cause serious health problems.</p>
+            <p><span class="highlight">Resource Depletion:</span> Recycling recovers valuable materials, reducing the need for new mining.</p>
+        </div>
+        <div class="image">
+            <img src="https://circularcomputing.com/wp-content/uploads/2024/01/E-waste-Header.webp" alt="E-Waste Problem"  height="1000px" breath="90%">
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="process-container">
+        <div class="section">
+            <h1>Our E-Waste Recycling Process</h1>
+            <p>Our process maximizes resource recovery and minimizes environmental impact.</p>
+            <div class="process">
+                <div class="process-item">
+                    <img src="./waste.png" title="Waste Collection">
+                    <span><span class="highlight">1. Collection:</span> E-waste is collected from various sources.</span>
+                </div>
+                <div class="process-item">
+                    <img src="./sort-arrows-couple-pointing-up-and-down.png" alt="Sorting">
+                    <span><span class="highlight">2. Sorting:</span> Items are sorted by type and material.</span>
+                </div>
+                <div class="process-item">
+                    <img src="./hammer.png" alt="Dismantling">
+                    <span><span class="highlight">3. Dismantling:</span> Manual and mechanical dismantling separates components.</span>
+                </div>
+                <div class="process-item">
+                    <img src="./setting.png" alt="Processing">
+                    <span><span class="highlight">4. Processing:</span> Materials are processed for recovery.</span>
+                </div>
+            </div>
+        </div>
+        <div class="image">
+            <img src="https://assets.isu.pub/document-structure/220519054811-61ebb10cec2d23fd7fa217fdd12ff14e/v1/c0f6aa56b56e0a609233cf94aec61f38.jpeg" alt="E-Waste Recycling Process" height="1000px" breath="90%">
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button class="btn" onclick="window.location.href='previous.html'">Back</button>
+        <button class="btn" onclick="window.location.href='./budget.html'">Next</button>
+    </div>
+
+</body>
+</html>

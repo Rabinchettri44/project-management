@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You - E-Waste</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #020202, #063a1d);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      color: #fff;
+    }
+
+    .container {
+      text-align: center;
+      animation: floatUpDown 4s ease-in-out infinite;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 8rem;
+      font-weight: bold;
+      color: #00ff88;
+      text-shadow:
+        0 0 10px #00ff88,
+        0 0 30px #00ffaa,
+        0 0 60px #00ffaa;
+      animation: glow 3s ease-in-out infinite, glitch 2.5s infinite;
+    }
+
+    .subtext {
+      font-size: 2.8rem;
+      color: #ffcc00;
+      margin-top: 30px;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .recycle-icon {
+      font-size: 4.5rem;
+      margin-top: 50px;
+      animation: bounce 2s infinite;
+      color: #ffffff;
+    }
+
+    /* Background Circles */
+    .bg-circles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .bg-circles span {
+      position: absolute;
+      display: block;
+      width: 40px;
+      height: 40px;
+      background: rgba(0, 255, 136, 0.15);
+      border-radius: 50%;
+      animation: rise 10s linear infinite;
+    }
+
+    /* Animations */
+    @keyframes glow {
+      0% { text-shadow: 0 0 10px #00ff88; }
+      50% { text-shadow: 0 0 30px #00ffaa; }
+      100% { text-shadow: 0 0 10px #00ff88; }
+    }
+
+    @keyframes floatUpDown {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes glitch {
+      0% { text-shadow: 0 0 10px #00ff88; }
+      25% { text-shadow: 2px -2px 20px #00ffaa; }
+      50% { text-shadow: -2px 2px 20px #00ffaa; }
+      75% { text-shadow: 1px -1px 30px #00ff88; }
+      100% { text-shadow: 0 0 10px #00ff88; }
+    }
+
+    @keyframes rise {
+      0% { transform: translateY(100vh) scale(0.3); opacity: 0; }
+      50% { opacity: 0.6; }
+      100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+    }
+
+    /* Background bubbles placement */
+    .bg-circles span:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .bg-circles span:nth-child(2) { left: 25%; animation-delay: 2s; }
+    .bg-circles span:nth-child(3) { left: 45%; animation-delay: 4s; }
+    .bg-circles span:nth-child(4) { left: 65%; animation-delay: 6s; }
+    .bg-circles span:nth-child(5) { left: 85%; animation-delay: 8s; }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 4rem; }
+      .subtext { font-size: 1.8rem; }
+      .recycle-icon { font-size: 3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-circles">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <div class="container">
+    <h1>THANK YOU 🙏</h1>
+    <div class="subtext">For Your Attention & Support on E-Waste Solutions</div>
+    <div class="recycle-icon">♻️</div>
+  </div>
+
+</body>
+</html>

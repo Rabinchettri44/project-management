@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to E-Waste</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://t3.ftcdn.net/jpg/07/32/69/82/360_F_732698247_KjGhhblfhB4W3iLVRwwygnePe9vDcLSD.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            animation: fadeInBackground 2s ease-in-out;
+        }
+        @keyframes fadeInBackground {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 80%;
+            animation: slideIn 1s ease-out;
+            box-shadow: 0 0 15px rgba(255, 204, 0, 0.8);
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        h1 {
+            font-size: 3.5rem;
+            color: #ffcc00;
+            animation: textGlow 1.5s infinite alternate;
+        }
+        @keyframes textGlow {
+            from { text-shadow: 0 0 10px #ffcc00; }
+            to { text-shadow: 0 0 30px #ffcc00; }
+        }
+        p {
+            font-size: 1.7rem;
+            margin-top: 15px;
+            animation: fadeInText 1.5s ease-in-out;
+            line-height: 1.6;
+        }
+        @keyframes fadeInText {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .nav-container {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 40px;
+        }
+        .nav-btn {
+            padding: 15px 25px;
+            background: #ffcc00;
+            color: black;
+            border: none;
+            font-size: 1.3rem;
+            cursor: pointer;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 4px 10px rgba(255, 204, 0, 0.7);
+        }
+        .nav-btn:hover {
+            background: #e6b800;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Introduction to E-Waste</h1>
+        <p>
+            E-waste, or electronic waste, refers to discarded electronic devices. With rapid technological advancements, old gadgets become obsolete quickly, leading to a surge in e-waste.
+            Proper recycling and disposal of e-waste help prevent environmental pollution and promote resource recovery.
+        </p>
+        <p>
+            Many electronic components contain hazardous substances like lead, mercury, and cadmium, which can pollute the environment if not handled properly.
+            Recycling e-waste reduces landfill waste and allows the recovery of valuable materials such as gold, silver, and copper.
+        </p>
+        <p>
+            Improper disposal of e-waste contributes to environmental degradation, harming soil, water, and air quality. Raising awareness and implementing sustainable recycling practices
+            can mitigate these risks, ensuring a cleaner and healthier future for generations to come.
+        </p>
+    </div>
+    <div class="nav-container">
+        <a href="wbs.html" class="nav-btn">Back</a>
+        <a href="e-waste.html" class="nav-btn">Next</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Profiles</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1a1a2e, #16213e);
+            color: white;
+            margin: 0;
+            padding: 20px;
+            animation: backgroundFade 5s infinite alternate;
+        }
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .profiles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .profile {
+            background: #222;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s, background 0.3s;
+            cursor: pointer;
+            animation: bounceIn 1.5s ease-in-out, glow 2s infinite alternate;
+        }
+        .profile:hover {
+            transform: scale(1.1);
+            background: #444;
+            animation: shake 0.5s;
+        }
+        p {
+            font-size: 2rem;
+            font-weight: bold;
+            animation: textGlow 2s infinite alternate;
+        }
+        .next-btn {
+            padding: 15px 30px;
+            background: #ffcc00;
+            color: black;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            margin-top: 30px;
+            border-radius: 10px;
+            transition: background 0.3s;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            animation: bounce 1s infinite alternate;
+        }
+        .next-btn:hover {
+            background: #e6b800;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes bounceIn {
+            0% { transform: scale(0.5); opacity: 0; }
+            60% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+        @keyframes glow {
+            from { box-shadow: 0 0 10px #ffcc00; }
+            to { box-shadow: 0 0 20px #ff9900; }
+        }
+        @keyframes textGlow {
+            from { text-shadow: 0 0 10px #ffcc00; }
+            to { text-shadow: 0 0 20px #ff9900; }
+        }
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Team Profiles</h1>
+    <h2 id="announcement">Loading members...</h2>
+    
+    <div class="profiles">
+        <div class="profile"><p> Rabin chettri</p></div>
+        <div class="profile"><p>Tshering Norbu</p></div>
+        <div class="profile"><p>Ayush Prasad</p></div>
+        <div class="profile"><p>Ashika Pradhan</p></div>
+        <div class="profile"><p>Smita Poudyal</p></div>
+        <div class="profile"><p>Jyoti Bai Rajput</p></div>
+        <div class="profile"><p>Seema Balmiki</p></div>
+        <div class="profile"><p>Yeshey Lhamu Moktan</p></div>
+        <div class="profile"><p>Suk Maya Rai</p></div>
+        <div class="profile"><p>Lalmuniya</p></div>
+    </div>
+
+    <button class="next-btn" onclick="window.location.href='wbs.html'">Next</button>
+
+    <script>
+        const names = [
+            " Rabin chettri",
+            "  Tshering Norbu",
+            "Ayush Prasad",
+            "Ashika Pradhan",
+            "Smita Poudyal",
+            "Jyoti Bai Rajput",
+            "Seema Balmiki",
+            "Yeshey Lhamu Moktan",
+            "Suk Maya Rai",
+            "Lalmuniya"
+        ];
+
+        function startSpeaking() {
+            const speechQueue = [
+                "These are Group 4 team members.",
+                "The leader is Rabin chettri, who is guiding the following members."
+            ].concat(names);
+
+            function speakNext(index = 0) {
+                if (index < speechQueue.length) {
+                    const utterance = new SpeechSynthesisUtterance(speechQueue[index]);
+                    utterance.rate = 0.9;
+                    speechSynthesis.speak(utterance);
+
+                    utterance.onend = () => {
+                        setTimeout(() => speakNext(index + 1), 1000);
+                    };
+                }
+            }
+            speakNext();
+        }
+
+        // Start speaking when the page loads
+        window.onload = startSpeaking;
+    </script>
+</body>
+</html>

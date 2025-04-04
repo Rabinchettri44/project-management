@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Waste Management Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, red, black, yellow, blue, purple);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .title {
+            background-color: rgba(255, 255, 255, 0.3);
+            padding: 20px 40px;
+            border-radius: 12px;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+        .tree {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 3px solid white;
+            padding: 30px;
+            border-radius: 15px;
+            background-color: rgba(0, 0, 0, 0.6);
+            width: 85%;
+        }
+        .branch {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            position: relative;
+        }
+        .category {
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 25px;
+            border-radius: 10px;
+            width: 280px;
+            font-weight: bold;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+            box-shadow: 4px 4px 12px rgba(255, 255, 255, 0.5);
+            font-size: 22px;
+        }
+        .category:hover {
+            transform: scale(1.15);
+            background-color: yellow;
+            color: black;
+        }
+        .sub-category {
+            background-color: rgba(0, 0, 0, 0.7);
+            margin-top: 12px;
+            padding: 15px;
+            border-radius: 6px;
+            font-size: 18px;
+            text-align: center;
+            box-shadow: 3px 3px 6px rgba(255, 255, 255, 0.6);
+        }
+        .buttons {
+            margin-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            width: 85%;
+        }
+        .btn {
+            background-color: white;
+            color: black;
+            padding: 22px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background-color: yellow;
+        }
+        .btn-back {
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+        }
+        .btn-next {
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">E-Waste Management Project</div>
+        <div class="tree">
+            <div class="branch">
+                <div class="category">Project Initiation
+                    <div class="sub-category">Project Planning & Feasibility Study</div>
+                    <div class="sub-category">Stakeholder Identification & Engagement</div>
+                    <div class="sub-category">Legal & Environmental Compliance</div>
+                </div>
+                <div class="category">Collection & Segregation
+                    <div class="sub-category">E-Waste Collection Points Setup</div>
+                    <div class="sub-category">Public Awareness & Collection Drives</div>
+                    <div class="sub-category">Logistics & Transportation Planning</div>
+                </div>
+                <div class="category">Processing & Recycling
+                    <div class="sub-category">Dismantling & Component Recovery</div>
+                    <div class="sub-category">Hazardous Material Handling</div>
+                    <div class="sub-category">Metal & Plastic Recycling</div>
+                    <div class="sub-category">Data Destruction of E-Waste</div>
+                </div>
+            </div>
+            <div class="branch">
+                <div class="category">Disposal & Environmental Safety
+                    <div class="sub-category">Safe Disposal of Non-Recyclable Waste</div>
+                    <div class="sub-category">Toxic Waste Treatment (Batteries, POBs, etc.)</div>
+                    <div class="sub-category">Compliance with Environmental Regulations</div>
+                    <div class="sub-category">Monitoring & Reporting Environmental Impact</div>
+                </div>
+                <div class="category">Awareness & Training
+                    <div class="sub-category">Performance Tracking & Reporting</div>
+                    <div class="sub-category">Stakeholder Feedback & Review</div>
+                    <div class="sub-category">Project Completion & Impact Assessment</div>
+                    <div class="sub-category">Future Recommendations & Policy Advocacy</div>
+                </div>
+                <div class="category">Project Monitoring & Closure
+                    <div class="sub-category">Performance Tracking & Reporting</div>
+                    <div class="sub-category">Project Completion Assessment</div>
+                    <div class="sub-category">Future Recommendations & Policy Advocacy</div>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="btn btn-back" onclick="goBack()">Back</button>
+            <button class="btn btn-next" onclick="goNext()">Next</button>
+        </div>
+    </div>
+    <script>
+        function goBack() {
+            window.location.href = 'profile.html';
+        }
+        function goNext() {
+            window.location.href = 'into.html';
+        }
+    </script>
+</body>
+</html>

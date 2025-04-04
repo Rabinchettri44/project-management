@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Management - Group 4</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 90%;
+      max-width: 1600px;
+      padding: 60px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 40px;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 0 40px rgba(0, 255, 255, 0.2);
+      animation: fadeInContainer 1.5s ease-out forwards;
+    }
+
+    .left-logo {
+      width: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: flyInLeft 1.2s ease-out forwards;
+    }
+
+    .left-logo img {
+      width: 90%;
+      max-width: 400px; /* Logo made bigger */
+      filter: drop-shadow(0 0 25px #00fff7);
+      transition: transform 0.3s ease;
+    }
+
+    .left-logo img:hover {
+      transform: scale(1.05);
+    }
+
+    .right-text {
+      width: 60%;
+      color: white;
+      text-align: center;
+      animation: flyInRight 1.4s ease-out forwards;
+    }
+
+    .right-text h1 {
+      font-size: 5rem;
+      margin: 0;
+      color: #fff;
+      text-shadow: 0 0 20px #00ffe1;
+      animation: zoomText 1.8s ease-out forwards;
+    }
+
+    .right-text h2 {
+      font-size: 6.5rem;
+      margin-top: 30px;
+      background: linear-gradient(to right, #00ffe1, #5ef5ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 25px #00ffd5;
+      font-weight: bold;
+      animation: flyInRight 2s ease-out forwards;
+    }
+
+    .next-btn {
+      margin-top: 50px;
+      padding: 25px 80px;
+      font-size: 3rem;
+      font-weight: bold;
+      border: none;
+      background: linear-gradient(to right, #00ffe1, #3bf3ff);
+      color: black;
+      border-radius: 15px;
+      cursor: pointer;
+      box-shadow: 0 0 25px #00ffe1;
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeInUp 2.5s ease-out forwards;
+    }
+
+    .next-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 35px #00ffe1;
+    }
+
+    /* Animations */
+    @keyframes fadeInContainer {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes flyInLeft {
+      from { opacity: 0; transform: translateX(-100px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes flyInRight {
+      from { opacity: 0; transform: translateX(100px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes zoomText {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .main-container {
+        flex-direction: column;
+        padding: 30px;
+      }
+
+      .left-logo, .right-text {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
+      .right-text h1 { font-size: 3rem; }
+      .right-text h2 { font-size: 4rem; }
+      .next-btn { font-size: 2rem; padding: 15px 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-container">
+    <div class="left-logo">
+      <img src="srm.jpeg" alt="College Logo">
+    </div>
+    <div class="right-text">
+      <h1>Project Management</h1>
+      <h2>Group 4</h2>
+      <button class="next-btn" onclick="window.location.href='profile.html'">Next →</button>
+    </div>
+  </div>
+
+</body>
+</html>

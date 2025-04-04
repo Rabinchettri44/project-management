@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgeting & Resource Allocation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, black, red, yellow, purple);
+            color: white;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            text-align: left;
+        }
+        h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 10px;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: fly-in 1.5s ease-out forwards;
+        }
+        .underline {
+            display: block;
+            width: 50%;
+            height: 8px;
+            background: linear-gradient(to right, yellow, red);
+            margin: auto;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+        .budget-section {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 40px;
+            border-radius: 15px;
+            opacity: 0;
+            transform: translateX(-100px);
+            animation: slide-in 1.5s ease-out 0.5s forwards;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .text {
+            width: 50%;
+        }
+        .text p, .text ul {
+            font-size: 2rem;
+            line-height: 1.8;
+        }
+        ul {
+            list-style-type: square;
+        }
+        .image {
+            width: 50%;
+            text-align: center;
+            opacity: 0;
+            transform: translateX(100px);
+            animation: slide-in 1.5s ease-out 0.8s forwards;
+        }
+        .image img {
+            width: 100%;
+            border-radius: 12px;
+        }
+        .timeline-container {
+            display: flex;
+            margin-top: 50px;
+        }
+        .timeline-left {
+            width: 50%;
+            opacity: 0;
+            transform: translateX(-100px);
+            animation: slide-in 1.5s ease-out 1s forwards;
+        }
+        .timeline-left img {
+            width: 100%;
+            border-radius: 12px;
+        }
+        .timeline-right {
+            width: 50%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 40px;
+            border-radius: 15px;
+            opacity: 0;
+            transform: translateX(100px);
+            animation: slide-in 1.5s ease-out 1.2s forwards;
+        }
+        .milestone {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+        .milestone-number {
+            background: red;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+            padding: 15px 30px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            margin-top: 40px;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fly-in 1.5s ease-out 1.5s forwards;
+        }
+        .btn {
+            padding: 20px 40px;
+            background: #ffcc00;
+            color: black;
+            border: none;
+            font-size: 2.5rem;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .btn:hover {
+            background: #e6b800;
+            transform: scale(1.1);
+        }
+
+        /* Animations */
+        @keyframes fly-in {
+            0% { opacity: 0; transform: translateY(-50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slide-in {
+            0% { opacity: 0; transform: translateX(-100px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Budgeting and Resource Allocation</h1>
+        <span class="underline"></span>
+
+        <div class="budget-section">
+            <div class="content">
+                <style>
+                    .text {
+                        opacity: 0;
+                        transform: translateY(30px);
+                        animation: fade-in 1.2s ease-out forwards;
+                        font-size: 1.8rem;
+                        line-height: 1.6;
+                    }
+                
+                    @keyframes fade-in {
+                        0% { opacity: 0; transform: translateY(30px); }
+                        100% { opacity: 1; transform: translateY(0); }
+                    }
+                </style>
+                
+                <div class="text">
+                    <p><strong>Strategic budgeting ensures efficient resource utilization and project success.</strong></p>
+                    
+                    <p><strong>Budget Allocation:</strong></p>
+                    <ul>
+                        <li>💰 <strong>Total Budget:</strong> ₹75 Crore</li>
+                        <li>👷‍♂️ <strong>Labor:</strong> 38% - ₹28.5 Crore for wages, training, and workforce management.</li>
+                        <li>🏗️ <strong>Infrastructure:</strong> 27% - ₹20.25 Crore for equipment, technology, and facilities.</li>
+                        <li>🚛 <strong>Logistics:</strong> 20% - ₹15 Crore for transportation, storage, and supply chain expenses.</li>
+                        <li>📢 <strong>Outreach:</strong> 15% - ₹11.25 Crore for marketing, public awareness, and stakeholder engagement.</li>
+                    </ul>
+                
+                    <p><strong>Primary Funding Channels:</strong></p>
+                    <ul>
+                        <li>🏛️ <strong>Government Grants:</strong> Public sector funding and subsidies.</li>
+                        <li>♻️ <strong>Revenue Streams:</strong> Profits from recovered and recycled materials.</li>
+                        <li>📈 <strong>Private Investments:</strong> Partnerships and venture capital.</li>
+                        <li>🤝 <strong>Corporate Sponsorships:</strong> Industry-backed financial support.</li>
+                    </ul>
+                </div>
+                
+                
+                <div class="image">
+                    <img src=" https://th-i.thgim.com/public/news/national/tamil-nadu/xfhnx2/article69350825.ece/alternates/FREE_1200/GCC%20waste.jpg " alt="Budgeting"> <br> <br>
+                    <img src="https://akm-img-a-in.tosshub.com/businesstoday/styles/medium_crop_simple/public/images/story/202306/126-127-1.jpg?itok=bufEQY7A" alt="Budgeting"> <br> <br>
+                    <img src=" https://www.mdpi.com/suschem/suschem-01-00012/article_deploy/html/images/suschem-01-00012-g001.png  " alt="Budgeting"> <br> <br>
+                    <img src="https://ascelibrary.org/cms/10.1061/(ASCE)HZ.2153-5515.0000719/asset/a5a26488-cef2-4ecc-8f72-f2fcd1920008/assets/images/large/figure6.jpg " alt="Budgeting"> <br> <br>
+                    <img src="  https://www.frontiersin.org/files/Articles/1030196/fbuil-08-1030196-HTML/image_m/fbuil-08-1030196-g005.jpg" alt="Budgeting"> <br> <br>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-container">
+            <div class="timeline-left">
+                <img src="https://media.licdn.com/dms/image/v2/C5612AQE4Ywe23PA8Zw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1520161079602?e=2147483647&v=beta&t=2_xJnjRtYSDtEMfyiBGSIGx-wv5WRgXWIlNziGZfmD0" alt="E-Waste Timeline"  ><br> <br> <br> 
+                <img src="./Evolution-of-e-waste-policy-of-India.png" alt="E-Waste Timeline"  >   <br><br><br>              
+                <img src="./WhatsApp Image 2025-04-03 at 7.09.31 PM.jpeg" alt="E-Waste Timeline"  >  <br> <br>   <br>            
+             </div>
+            <div class="timeline-right">
+                <h1>Project Timeline and Milestones</h1>
+                <p>A clear timeline ensures timely project completion.</p>
+                <div class="milestone">
+                    <div class="milestone-number">1</div>
+                    <p><strong>Phase 1: Planning</strong> <br> Month 1-2: Project setup and resource allocation.</p>
+                </div>
+                <div class="milestone">
+                    <div class="milestone-number">2</div>
+                    <p><strong>Phase 2: Implementation</strong> <br> Month 3-6: Collection and processing.</p>
+                </div>
+                <div class="milestone">
+                    <div class="milestone-number">3</div>
+                    <p><strong>Phase 3: Optimization</strong> <br> Month 7-12: Efficiency improvements and reporting.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button class="btn" onclick="window.location.href='e-waste.html'">Back</button>
+        <button class="btn" onclick="window.location.href='./control.html'">Next</button>
+    </div>
+
+</body>
+</html>

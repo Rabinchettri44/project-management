@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-waste Recycling</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, red, yellow, black);
+            color: white;
+            border: 15px solid;
+            border-image: linear-gradient(to right, red, black);
+            border-image-slice: 1;
+            overflow: hidden;
+            position: relative;
+        }
+        .container {
+            display: flex;
+            max-width: 80%;
+            background: black;
+            padding: 30px;
+            border-radius: 12px;
+            position: relative;
+            opacity: 0;
+            transform: scale(0.85);
+            animation: fadeInScale 1s ease-out forwards;
+            box-shadow: 0 0 15px rgba(255, 204, 0, 0.7);
+        }
+        @keyframes fadeInScale {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .text-section {
+            flex: 1;
+            padding: 15px;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: fadeInUp 1s ease-out forwards 0.5s;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-shadow: 0 0 10px yellow;
+            animation: glow 1.5s infinite alternate;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 8px yellow; }
+            to { text-shadow: 0 0 25px yellow; }
+        }
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .image-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transform: translateX(40px);
+            animation: slideIn 1s ease-out forwards 1s;
+        }
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .image-section img {
+            width: 700px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(255, 204, 0, 0.7);
+        }
+        .button-container {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 30px;
+        }
+        .btn {
+            padding: 12px 25px;
+            background: #ffcc00;
+            color: black;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background 0.3s, transform 0.2s;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 5px 12px rgba(255, 204, 0, 0.7);
+            opacity: 1;
+            animation: fadeInUp 1s ease-out forwards 1.5s;
+        }
+        .btn:hover {
+            background: #e6b800;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-section">
+            <h1>E-waste Recycling: A Sustainable Future</h1>
+            <p>
+                This presentation outlines our comprehensive e-waste recycling approach.
+                We will cover key aspects from initial processing to final reporting.
+                Join us as we explore a path toward a sustainable future.
+            </p>
+            <p>
+                E-waste contains valuable materials such as gold, silver, and platinum. Proper recycling helps recover these resources, reducing the need for mining and preserving natural reserves.
+            </p>
+            <p>
+                Toxic substances like lead, mercury, and cadmium in e-waste can harm human health and the environment if not disposed of correctly. Effective recycling prevents soil and water contamination.
+            </p>
+            <p>
+                Governments and organizations worldwide are implementing strict regulations to manage e-waste. Awareness and responsible actions can make a significant impact in reducing electronic waste pollution.
+            </p>
+        </div>
+        <div class="image-section">
+            <img src="https://static.vecteezy.com/system/resources/previews/051/410/476/non_2x/massive-pile-of-discarded-electronics-and-circuit-boards-highlighting-e-waste-environmental-issues-photo.jpeg" alt="E-waste Recycling">
+         </div>
+        <div class="button-container">
+            <a href="into.html" class="btn">Back</a>
+            <a href="form.html" class="btn">Next</a>
+        </div>
+    </div>
+</body>
+</html>
